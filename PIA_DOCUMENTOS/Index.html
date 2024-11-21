@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Etapas de Trabajo</title>
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button {
+  background: linear-gradient(to bottom right, #4CAF50, #388E3C);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  /* ... otros estilos */
+}
+.button {
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #388E3C;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+.button i {
+  margin-right: 5px;
+}
+.button {
+  animation: buttonAnimation 1s infinite;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+        #contenido {
+            display: none; /* Ocultamos el contenido por defecto */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Etapas de Trabajo</h2>
+
+<div> <center>
+    <button class="button" onclick="mostrarEtapa(1)">Etapa 1</button>
+    <button class="button" onclick="mostrarEtapa(2)">Etapa 2</button>
+    <button class="button" onclick="mostrarEtapa(3)">Etapa 3</button>
+    <button class="button" onclick="mostrarEtapa(4)">Etapa 4</button>
+</center>
+</div>
+<div id="contenido">
+    </div>
+
+<script>
+function mostrarEtapa(etapa) {
+    // Obtenemos el elemento donde se mostrará el contenido
+    var contenidoDiv = document.getElementById("contenido");
+
+    // Establecemos el contenido según la etapa seleccionada
+    switch (etapa) {
+        case 1:
+            contenidoDiv.innerHTML = "Contenido de la etapa 1";
+            break;
+        case 2:
+            contenidoDiv.innerHTML = "Contenido de la etapa 2";
+            break;
+        case 3:
+            contenidoDiv.innerHTML = "Contenido de la etapa 3";
+            break;
+        case 4:
+            contenidoDiv.innerHTML = "Contenido de la etapa 4";
+            break;
+    }
+
+    // Mostramos el div del contenido
+    contenidoDiv.style.display = "block";
+}
+</script>
+
+</body>
+</html>
+</html>
